@@ -1,0 +1,19 @@
+<table *ngIf="employees && employees.length > 0">
+  <tr>
+    <th>#</th>
+    <th>Actions</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Department</th>
+  </tr>
+  <tr *ngFor="let e of employees; let i = index;">
+    <td>{{i + 1}}</td>
+    <td><a href="#" routerLink="/employees/{{e.id}}">View</a></td>
+    <td>{{e.firstName}}</td>
+    <td>{{e.lastName}}</td>
+    <td>{{e.department.name}}</td>
+  </tr>
+</table>
+<div *ngIf="!employees || employees.length ==0">
+  No meployees found
+</div>

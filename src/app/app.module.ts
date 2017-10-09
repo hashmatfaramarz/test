@@ -1,12 +1,14 @@
 import { EmployeeService } from './employees/employee.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { ListComponent } from './employees/list/list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ViewComponent } from './employees/view/view.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { ViewComponent } from './employees/view/view.component';
         redirectTo: 'dashboard',
         pathMatch: 'full'
       }
-    ])
+    ]),
+    HttpModule
   ],
   providers: [
     EmployeeService

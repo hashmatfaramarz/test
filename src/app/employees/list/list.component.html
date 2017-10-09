@@ -1,17 +1,17 @@
 <table *ngIf="employees && employees.length > 0">
   <tr>
     <th>#</th>
-    <th>Actions</th>
+    <th>Action</th>
     <th>First name</th>
     <th>Last name</th>
-    <th>Department</th>
+    <th>Marks</th>
   </tr>
   <tr *ngFor="let e of employees; let i = index;">
     <td>{{i + 1}}</td>
     <td><a href="#" routerLink="/employees/{{e.id}}">View</a></td>
-    <td>{{e.firstName}}</td>
-    <td>{{e.lastName}}</td>
-    <td>{{e.department.name}}</td>
+    <td>{{e.name}}</td>
+    <td>{{e.last_name}}</td>
+    <td>{{e.marks}}</td>
   </tr>
 </table>
 <div *ngIf="!employees || employees.length ==0">

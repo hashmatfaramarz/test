@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Students;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,4 +62,13 @@ $employees = [
 
 Route::get('/employees', function (Request $request) use($employees){
     return response()->json($employees);
+});
+
+Route::get('/students',function (){
+    $createdStudent = Students::all();
+   return response()->json($createdStudent);
+});
+Route::post('/students',function (Request $request){
+    $createdStudent = Students::create($request->all());
+    return response()->json($createdStudent);
 });

@@ -29,6 +29,6 @@ export class EmployeeService {
     }
 
     list() {
-        return this._http.get('http://test.dev:81//api/employees');
+        return this._http.get('http://test.dev:81/students');
     }
 }

@@ -68,7 +68,7 @@ Route::get('/students',function (){
     $createdStudent = Students::all();
    return response()->json($createdStudent);
 });
-Route::post('/students',function (Request $request){
+Route::post('/send-form',function (Request $request){
     $createdStudent = Students::create($request->all());
     return response()->json($createdStudent);
 });

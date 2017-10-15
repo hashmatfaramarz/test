@@ -29,6 +29,10 @@ export class EmployeeService {
     }
 
     list() {
-        return this._http.get('http://test.dev:81/students');
+        return this._http.get('http://vcs.dev:81//api/students');
+    }
+
+    send(data) {
+        return this._http.post('http://vcs.dev:81//api/send-form',data);
     }
 }

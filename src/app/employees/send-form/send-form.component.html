@@ -1,0 +1,12 @@
+<form #employee="ngForm" class="example-form" (ngSubmit)="sendData(employee)">
+  <mat-form-field class="example-full-width">
+    <input matInput [(ngModel)]="data.name" placeholder="Name" name="name">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput [(ngModel)]="data.last_name" placeholder="LastName" name="last_name">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput [(ngModel)]="data.marks" placeholder="Marks" name="marks">
+  </mat-form-field>
+  <button type="submit" mat-raised-button>Save</button>
+</form>
